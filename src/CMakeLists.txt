@@ -85,7 +85,7 @@ target_include_directories(
 
 set(SKSE_SUPPORT_XBYAK ON)
 
-add_subdirectory("$ENV{CommonLibSSEPath_NG}" CommonLibSSE EXCLUDE_FROM_ALL)
+add_subdirectory("$ENV{CommonLibSSEPath}" CommonLibSSE EXCLUDE_FROM_ALL)
 
 find_package(xbyak REQUIRED CONFIG)
 
