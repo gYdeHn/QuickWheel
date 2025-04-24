@@ -22,6 +22,11 @@ if(NOT DEFINED CompiledPluginsPath)
 	message(FATAL_ERROR "CompiledPluginsPath is not set")
 endif()
 
+set_from_environment(CommonLibSSEPath)
+if(NOT DEFINED CommonLibSSEPath)
+    message(FATAL_ERROR "The environment variable CommonLibSSEPath is not set.")
+endif()
+
 option(COPY_OUTPUT "Copy the output of build operations to the game directory" ON)
 option(ENABLE_SKYRIM_SE "Enable support for Skyrim SE in the dynamic runtime feature." ON)
 option(ENABLE_SKYRIM_AE "Enable support for Skyrim AE in the dynamic runtime feature." ON)
